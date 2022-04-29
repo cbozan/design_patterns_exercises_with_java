@@ -4,8 +4,6 @@
  */
 package creational.abstractfactory.ata;
 
-import creational.factory.*;
-
 /**
  *
  * @author https://github.com/cbozan

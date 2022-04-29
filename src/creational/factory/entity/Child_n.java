@@ -2,10 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package creational.abstractfactory.childs;
-
-import creational.abstractfactory.ata.Ata;
-import creational.factory.*;
+package creational.factory.entity;
 
 /**
  *

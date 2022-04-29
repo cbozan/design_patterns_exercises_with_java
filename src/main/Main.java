@@ -4,8 +4,8 @@ import creational.abstractfactory.abstractfactory.AtaAbstractFactory;
 import creational.abstractfactory.ata.Ata;
 import creational.abstractfactory.factory.AtaFactory;
 import creational.abstractfactory.factory.Child_1Factory;
-import creational.singleton.IstekliBaslatma;
-import creational.singleton.StatikBlokBaslatma;
+import creational.singleton.singleton.IstekliBaslatma;
+import creational.singleton.singleton.StatikBlokBaslatma;
 
 /**
  *

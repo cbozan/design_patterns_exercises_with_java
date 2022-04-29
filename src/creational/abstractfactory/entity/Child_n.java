@@ -2,17 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package creational.factory;
+package creational.abstractfactory.entity;
+
+import creational.abstractfactory.ata.Ata;
 
 /**
  *
  * @author https://github.com/cbozan
  */
-public class Child_2 extends Ata{
+public class Child_n extends Ata{
+
     private String p1;
     private String p2;
     
-    public Child_2(String p1, String p2){
+    public Child_n(String p1, String p2){
         this.p1 = p1;
         this.p2 = p2;
     }
@@ -26,4 +29,5 @@ public class Child_2 extends Ata{
     public String getP2() {
         return p2;
     }
+    
 }

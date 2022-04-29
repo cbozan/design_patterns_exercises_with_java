@@ -4,7 +4,7 @@
  */
 package creational.abstractfactory.factory;
 
-import creational.abstractfactory.childs.Child_n;
+import creational.abstractfactory.entity.Child_n;
 import creational.abstractfactory.abstractfactory.AtaAbstractFactory;
 import creational.abstractfactory.ata.Ata;
 
