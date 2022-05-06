@@ -14,8 +14,14 @@ public class BuilderTest {
     
     public static void main(String[] args){
         
-        CokOzellikliNesne.CokOzellikliNesneBuilder build = new CokOzellikliNesne.CokOzellikliNesneBuilder(3 /* rastgele*/);
-        CokOzellikliNesne nesne = build.setP2("Properties2").setP3(true).build();
+        CokOzellikliNesne.CokOzellikliNesneBuilder builder = new CokOzellikliNesne.CokOzellikliNesneBuilder(3 /* rastgele*/);
+        CokOzellikliNesne nesne = builder.setP2("Properties2").setP3(true).build();
+        
+//        // OR
+//         builder = builder.setP2("Properties2");
+//         builder = builder.setP3(false);
+//         CokOzellikliNesne nesne = builder.build();
+        
         System.out.println(nesne.toString());
         
     }
