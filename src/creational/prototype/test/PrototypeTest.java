@@ -4,6 +4,7 @@
  */
 package creational.prototype.test;
 
+import creational.prototype.example.SuperUserData;
 import creational.prototype.example.UserData;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -14,65 +15,25 @@ import java.util.logging.Logger;
  */
 public class PrototypeTest {
     
-    
     public static void main(String[] args) throws CloneNotSupportedException {
         
-        //ilk nesne oluşturulma aşaması veri tabanı bağlantısı sağlanacak
-        // initial object creation (will use the db connection)
-        UserData userDataOriginal = new UserData();
+        SuperUserData sud = new SuperUserData(1, 1);
+        sud.dataCategory = 2;
+        sud.dataNo = 2;
         
-        // clone original
-        UserData userDataCopy1 = (UserData) userDataOriginal.clone();
-        userDataCopy1.getUserData().add(new String[]{"added later copy1", "added later copy1"});
-        userDataCopy1.getUserData().add(new String[]{"added later copy1", "added later", "added later", "added later"});
+        SuperUserData sudClone = (SuperUserData) sud.clone();
         
-        // clone copy1
-        UserData userDataCopy2 = (UserData) userDataCopy1.clone();
+        UserData ud = new UserData(3, 3);
+        ud.dataCategory = 4;
+        ud.dataNo = 4;
         
-        // delete last element (array)
-        // listedeki son elemanı (diziyi) sil
-        userDataCopy2.getUserData().remove(userDataCopy2.getUserData().size() - 1); 
-        userDataCopy2.getUserMetaData().add(new String[]{"added later copy2", "akdsjfkj"});
+        UserData udClone = (UserData) ud.clone();
+       
+        System.out.println("sud object : " + sud + " and hashCode : " + sud.hashCode());
+        System.out.println("sudClone object : " + sudClone + " and hashCode : " + sudClone.hashCode());
         
-        System.out.println("Original data\n");
-        myPrint(userDataOriginal);
+        System.out.println("ud object : " + ud + " and hashCode : " + ud.hashCode());
+        System.out.println("udClone object : " + udClone + " and hashCode : " + udClone.hashCode());
         
-        System.out.println("\n\nCopy-1 data\n\n");
-        myPrint(userDataCopy1);
-        
-        System.out.println("\n\nCopy-2 data\n\n");
-        myPrint(userDataCopy2);
-        
-        System.out.println("\n\n");
-        
-    }
-    
-    public static void myPrint(UserData userData){
-        
-        System.out.println("\tuserData\n");
-        for(String[] row : userData.getUserData()){
-            System.out.print("\t\t");
-            for(int col = 0; col < row.length; col++){
-                System.out.print(row[col] + "\t");
-            }
-            System.out.println();
-        }
-        
-        System.out.println();
-        
-        System.out.println("\tuserMetaData\n");
-        for(String[] row : userData.getUserMetaData()){
-            System.out.print("\t\t");
-            for(int col = 0; col < row.length; col++){
-                System.out.print(row[col] + "\t");
-            }
-            System.out.println();
-        }
-        
-    }
-    
-    
-    
-    
-    
+    }  
 }
